@@ -51,7 +51,7 @@ selectDevice(){
 ### options: connect devices, update devices, exit
 startOptions=("Connect Devices" "Update Devices" "Exit")
 
-echo "What would you like to do?"
+
 
 select choice in "${startOptions[@]}"
 do
