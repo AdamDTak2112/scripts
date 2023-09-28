@@ -48,4 +48,5 @@ done
 
 ###########################################
 
-#main menu
+#main menu --
+### options: connect devices, update devices, exit
