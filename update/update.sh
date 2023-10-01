@@ -10,9 +10,7 @@ adbConnect() {
     adb connect $IP
 }
 
-#Turn on adb
-adb kill-server
-adb start-server
+
 
 #Menu for what device to update
 selectDevice(){
@@ -51,22 +49,24 @@ selectDevice(){
 ### options: connect devices, update devices, exit
 startOptions=("Connect Devices" "Update Devices" "Exit")
 
-
+#Turn on adb
+adb kill-server
+adb start-server
 
 select choice in "${startOptions[@]}"
-do
-    case $choice in
-        "Connect Devices")
-            echo "Reached connect devices"
-            ;;
-        "Update Devices")
-            echo "Reached update devices"
-            ;;
-        "Exit")
-            echo "Exiting Script, have a nice day!"
-            break;
-            ;;
-        *)
-            echo "Invalid"
-    esac
-done
+    do
+        case $choice in
+            "Connect Devices")
+                selectDevice
+                ;;
+            "Update Devices")
+                echo "Reached update devices"
+                ;;
+            "Exit")
+                echo "Exiting Script, have a nice day!"
+                break;
+                ;;
+            *)
+                echo "Invalid"
+         esac     
+    done
