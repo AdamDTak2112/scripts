@@ -6,6 +6,8 @@ ip22Bike='192.168.0.35'
 ip10Rower='192.168.0.41'
 ip10Tread='192.168.0.40'
 
+apkName='com.ifit.standalone-2.6.87.4498.apk'
+
 ### Function to connect device using ip
 
 adbConnect() {
@@ -50,7 +52,9 @@ selectDevice(){
 }
 
 updateApk(){
-
+    cd apk
+    files=(*)
+    echo '${files[0]}'
 }
 
 updateConsole(){
