@@ -1,4 +1,5 @@
 #! /bin/bash
+clear
 
 ### Global variables for device ip
 ip22Rower='192.168.0.34'
@@ -54,11 +55,14 @@ selectDevice(){
 updateApk(){
     cd apk
     files=(*)
-    echo '${files[0]}'
+    echo "${files[0]}"
+    $apkName= "${files[0]}"
 }
 
-updateConsole(){
+updateApk
 
+updateConsole(){
+    adb devices > 'devices/txt'
 }
 
 ###########################################
@@ -86,5 +90,6 @@ select choice in "${startOptions[@]}"
                 ;;
             *)
                 echo "Invalid"
+                ;;
          esac     
     done
