@@ -1,5 +1,11 @@
 #! /bin/bash
 
+### Global variables for device ip
+ip22Rower='192.168.0.34'
+ip22Bike='192.168.0.35'
+ip10Rower='192.168.0.41'
+ip10Tread='192.168.0.40'
+
 ### Function to connect device using ip
 
 adbConnect() {
@@ -43,7 +49,13 @@ selectDevice(){
         done
 }
 
+updateApk(){
 
+}
+
+updateConsole(){
+
+}
 
 ###########################################
 
