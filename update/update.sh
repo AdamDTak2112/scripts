@@ -12,7 +12,7 @@ adbConnect() {
 
 
 
-#Menu for what device to update
+### Menu for what device to update
 selectDevice(){
     options=("22\" Bike" "10\" Rower" "10\" Treadmill" "Exit")
     echo "Select which device you would like to update:"
@@ -42,6 +42,8 @@ selectDevice(){
             esac
         done
 }
+
+
 
 ###########################################
 
