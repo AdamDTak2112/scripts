@@ -60,7 +60,13 @@ updateApk(){
 
 
 updateConsole(){
-    adb devices > 'devices.txt'
+    adb devices | while read -r line; do
+
+        if [[ "$line" =~ "192.168.0" ]]; then
+
+            echo "$line" >> devices.txt
+        fi 
+    done
 }
 
 updateConsole
