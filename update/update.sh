@@ -71,6 +71,7 @@ updateConsole
 ### options: connect devices, update devices, exit
 startOptions=("Connect Devices" "Update Devices" "Exit")
 
+## TODO check if server is on and if devices are connected
 #Turn on adb
 adb kill-server
 adb start-server
