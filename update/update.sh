@@ -5,7 +5,7 @@ clear
 ip22Rower='192.168.0.34'
 ip22Bike='192.168.0.35'
 ip10Rower='192.168.0.41'
-ip10Tread='192.168.0.40'
+ip10Tread='192.168.0.40' 
 
 ### Function to connect device using ip
 
@@ -60,11 +60,13 @@ updateApk(){
 
 
 updateConsole(){
+    echo "Updating console..."
+    : > devices.txt
     adb devices | while read -r line; do
 
         if [[ "$line" =~ "192.168.0" ]]; then
 
-            echo "$line" >> devices.txt
+            echo "$line" > devices.txt
         fi 
     done
 }
